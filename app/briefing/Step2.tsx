@@ -54,7 +54,7 @@ const Step2: React.FC<Step2Props> = ({ formData, handleChange }) => {
           className="border rounded p-2 mb-2 w-full"
         >
           <option value="false">Nein</option>
-          <option value="true">Ja (+€)</option>
+          <option value="true">Ja</option>
         </select>
       </label>
     </div>
