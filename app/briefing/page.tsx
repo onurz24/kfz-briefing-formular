@@ -92,7 +92,7 @@ const FormPage = () => {
         throw new Error('Network response was not ok');
       }
   
-      const result = await response.json();
+      // const result = await response.json();
 
       setSubmissionMessage("Formular wurde übermittelt! (erneut Absenden möglich)");
       
