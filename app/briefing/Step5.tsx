@@ -3,10 +3,9 @@ import React from 'react';
 interface Step5Props {
   formData: any;
   handleChange: (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
-  setStep: (step: number) => void;
 }
 
-const Step5: React.FC<Step5Props> = ({ formData, handleChange, setStep }) => {
+const Step5: React.FC<Step5Props> = ({ formData, handleChange }) => {
   return (
     <div>
       <h2 className="text-lg font-semibold">Zusätzliche Anmerkungen</h2>

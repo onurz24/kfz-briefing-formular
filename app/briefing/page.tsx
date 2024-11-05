@@ -93,6 +93,7 @@ const FormPage = () => {
       }
   
       const result = await response.json();
+
       setSubmissionMessage("Formular wurde übermittelt! (erneut Absenden möglich)");
       
       // Reset form data after successful submission
@@ -136,7 +137,7 @@ const FormPage = () => {
         <div className="h-1 bg-blue-600" style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}></div>
       </div>
       <form onSubmit={currentStep === steps.length - 1 ? handleSubmit : undefined}>
-        <CurrentStepComponent formData={formData} handleChange={handleChange} setStep={setCurrentStep} errors={errors} />
+        <CurrentStepComponent formData={formData} handleChange={handleChange} errors={errors} />
         <div className="flex justify-between mt-4 gap-2">
           {currentStep > 0 && (
             <button

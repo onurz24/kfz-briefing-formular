@@ -3,11 +3,10 @@ import React from 'react';
 interface Step1Props {
   formData: any;
   handleChange: (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
-  setStep: (step: number) => void;
   errors: string[];
 }
 
-const Step1: React.FC<Step1Props> = ({ formData, handleChange, setStep, errors }) => {
+const Step1: React.FC<Step1Props> = ({ formData, handleChange, errors }) => {
   return (
     <div>
       <h2 className="text-lg font-semibold">Aktuelle Website</h2>

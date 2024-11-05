@@ -3,10 +3,9 @@ import React from 'react';
 interface Step2Props {
   formData: any;
   handleChange: (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
-  setStep: (step: number) => void;
 }
 
-const Step2: React.FC<Step2Props> = ({ formData, handleChange, setStep }) => {
+const Step2: React.FC<Step2Props> = ({ formData, handleChange }) => {
   return (
     <div>
       <h2 className="text-lg font-semibold">Projektumfang</h2>
