@@ -33,7 +33,7 @@ const Step3: React.FC<Step3Props> = ({ formData, handleChange }) => {
       </label>
       <label>
         <p>Standort:</p>
-        <p className="text-gray-500 text-sm">Wo ist Ihr Unternehmen ansässig?</p>
+        <p className="text-gray-500 text-sm">Wo befindet sich das Unternehmen ?</p>
         <input
           type="text"
           name="location"

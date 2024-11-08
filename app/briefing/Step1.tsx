@@ -12,7 +12,6 @@ const Step1: React.FC<Step1Props> = ({ formData, handleChange, errors }) => {
       <h2 className="text-lg font-semibold">Aktuelle Website</h2>
       <label>
         <p className="mt-2">URL der aktuellen Website:</p>
-        <p className="text-gray-500 text-sm">Geben Sie die vollständige URL Ihrer aktuellen Website an.</p>
         <input
           type="text"
           name="url"
@@ -24,11 +23,11 @@ const Step1: React.FC<Step1Props> = ({ formData, handleChange, errors }) => {
       </label>
       <label>
         <p>Hosting Anbieter:</p>
-        <p className="text-gray-500 text-sm">Nennen Sie den Anbieter und die monatlichen Kosten.</p>
+        <p className="text-gray-500 text-sm">Nennen Sie den Anbieter (optional die monatlichen Kosten).</p>
         <input
           type="text"
           name="hosting"
-          placeholder="z. B. Strato, IONOS (optional)"
+          placeholder="z. B. Strato, IONOS"
           value={formData.hosting}
           onChange={handleChange}
           className="border rounded p-2 mb-2 w-full"
@@ -42,7 +41,7 @@ const Step1: React.FC<Step1Props> = ({ formData, handleChange, errors }) => {
           onChange={handleChange}
           className="mr-2"
         />
-        <span>Überprüfen Sie Ihre Hosting-Kosten. (optional)</span>
+        <span>Sollen wir Ihre Hosting-Kosten überprüfen.</span>
       </label>
       <label className="inline-flex items-center mt-2">
         <input
@@ -52,7 +51,7 @@ const Step1: React.FC<Step1Props> = ({ formData, handleChange, errors }) => {
           onChange={handleChange}
           className="mr-2"
         />
-        <span>Kostenloses Backup der alten Website, falls technisch möglich. (optional)</span>
+        <span>Kostenloses Backup der alten Website, falls möglich.</span>
       </label>
       {errors.length > 0 && <p className="text-red-500">{errors.join(', ')}</p>}
     </div>

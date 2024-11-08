@@ -8,10 +8,10 @@ import Step5 from './Step5';
 
 const steps = [
     { id: 1, name: "Hosting", component: Step1 },
-    { id: 2, name: "Struktur & Funktionen", component: Step2 },
-    { id: 3, name: "Inhalte & Design", component: Step3 },
+    { id: 2, name: "Struktur", component: Step2 },
+    { id: 3, name: "Design", component: Step3 },
     { id: 4, name: "Projektumfang", component: Step4 },
-    { id: 5, name: "Zusätzliche Kommentare", component: Step5 },
+    { id: 5, name: "Kommentare", component: Step5 },
   ];
 const FormPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -50,7 +50,6 @@ const FormPage = () => {
       });
     }
   };
-  
 
   const handleNext = () => {
     if (currentStep < steps.length - 1) {
@@ -123,14 +122,14 @@ const FormPage = () => {
   const CurrentStepComponent = steps[currentStep].component;
 
   return (
-    <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg mt-8">
-      <h1 className="text-2xl font-bold text-center mb-4">Briefing Form</h1>
+    <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg mt-8 max-md:w-[95%] overflow-hidden">
+      <h1 className="text-2xl font-bold text-center mb-4">Fragebogen</h1>
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           {steps.map((step, index) => (
-            <div key={step.id} className={`flex-1 text-center ${currentStep >= index ? 'text-blue-600' : 'text-gray-400'}`}>
+            <div key={step.id} onClick={()=>{setCurrentStep(step.id - 1)}} className={`flex-1 text-center ${currentStep >= index ? 'text-blue-600' : 'text-gray-400'}`}>
               <div className="font-bold">{step.id}</div>
-              <div className="text-sm">{step.name}</div>
+              <div className="text-sm max-sm:text-[8px]">{step.name}</div>
             </div>
           ))}
         </div>

@@ -15,7 +15,7 @@ export default function Home() {
           Website online bleibt. Nach der Veröffentlichung stellen wir dir ein kostenloses Backup zum Download zur Verfügung.
         </p>
         <Link href="/briefing/">
-          <button className="bg-blue-500 text-white py-2 px-4 rounded w-full">
+          <button className="bg-blue-500 font-bold text-white py-2 px-4 rounded w-full">
             Fragebogen starten
           </button>
         </Link>
